@@ -1,6 +1,6 @@
 # Tracker Official Invite Sheet
 
-[The Sheet](https://inviteroute.github.io/Sheet/)
+[The Sheet](https://inviteroute.github.io/sheet/)
 
 How to contribute more data to The Sheet, in order of preference:
 
