@@ -6,21 +6,48 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
 	<title>The Sheet</title>
 	<style>
+	@media (prefers-color-scheme: light) {
+		:root {
+			--bg: white;
+			--color: black;
+		}
+		a {
+			color: #9f009f;
+		}
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--bg: black;
+			--color: white;
+		}
+		a {
+			color: #ff00ff;
+		}
+	}
 	html, body {
+		background-color: var(--bg);
+		color: var(--color);
 		font: 16px sans-serif;
 		margin: 0;
 		padding: 0;
 	}
-	.desc {
-	}
+	.spacer { height: 8px; }
 	#main {
 		border-spacing: 3px;
 		border-collapse: separate;
 	}
-	td {
-		border: 1px black solid;
-		padding: 3px;
+	#h {
+		position: sticky;
+		top: 3px;
+		background-color: var(--bg);
 	}
+	td,th {
+		border: 1px var(--color) solid;
+		padding: 3px;
+		font-weight: normal;
+	}
+	.arrow { font-size:0; }
+	.arrow::before { font-size:initial;content: " → "; }
 	@media (max-aspect-ratio: 5/6) {
 		#main {
 			margin: 0;
@@ -37,254 +64,277 @@
 	</style>
 </head>
 <body>
-<div style="position:fixed;bottom:0.5em;right:0.5em;text-align:right;background:#fff;border:1px black solid;padding:4px;">
-	<a href="https://inviteroute.github.io/graph/" style="color:#9F009F">Interactive graph view</a><br>
-	See the <a href="https://github.com/inviteroute/graph" style="color:#9F009F">GitHub repository</a> for ways to contribute data.
-</div>
 <table id="main">
-<tr class="desc"><td colspan="3">AnimeBytes (AB)<br>Invite forum unlocks with Power User user class: 25GB upload, 0.7 ratio, 10 torrents uploaded, 2 weeks account age.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;ACM</td><td>14&nbsp;days</td><td>4TB upload. 6 months account age.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;ANT</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;CCS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;D3</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;DIC</td><td>14&nbsp;days</td><td>10 music uploads, or 15 other uploads.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;FF</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;LzTr</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;MTV</td><td>180&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;NBL</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;OPS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;PxC</td><td>30&nbsp;days</td><td>1 month account age.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;PxHD</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;RED</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;SM</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;TG</td><td>14&nbsp;days</td><td>2 or 3 other tracker profiles.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;THD</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;U2</td><td>14&nbsp;days</td><td>Content to contribute.</td></tr>
-<tr><td>AB&nbsp;→&nbsp;UHDB</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">AlphaRatio (AR)<br>Invite forum unlocks with Sphinx user class: 3.2TB upload, 1.44 million seed bonus points, no Hit and Runs, 26 weeks account age.<br><br>Satyr user class: 12TB upload, 2.4 million seed bonus points, no Hit and Runs, 60 weeks account age.<br>Adonis user class: 12TB upload, 2.0 million seed bonus points, no Hit and Runs, 60 weeks account age, 50USD or greater donation.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;BHD</td><td>182&nbsp;days</td><td>Satyr or Adonis user class.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;GGn</td><td>182&nbsp;days</td><td>Satyr or Adonis user class.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;LzTr</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;MTV</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;OBS</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;OPS</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;SceneHD</td><td>365&nbsp;days</td><td>1 torrent upload tagged scene, 12 months account age.</td></tr>
-<tr><td>AR&nbsp;→&nbsp;UHDB</td><td>182&nbsp;days</td><td>Satyr or Adonis user class.</td></tr>
-<tr class="desc"><td colspan="3">BeyondHD (BHD)<br>Invite forum unlocks with Pro user class: 1.25TB upload, 0.70 ratio, 30 days seed time, 4 years 11 months total seed time, 60 completed seeds, 500GB special seed size, 6 months account age.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;Aither</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;ANT</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;CGP</td><td>90&nbsp;days</td><td>1.0 ratio. 3 months account age.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;Hone</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;MTV</td><td>182&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;NBL</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;PxC</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;PxHD</td><td>180&nbsp;days</td><td>2 other tracker profiles.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;RED</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BHD&nbsp;→&nbsp;SM</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">Bibliotik (BiB)<br>Invite forum unlocks with Power User user class: either 1GB upload and 100 torrents uploaded, or 10GB upload and 10 torrents uploaded, 1.05 ratio, 2 weeks account age.</td></tr>
-<tr><td>BiB&nbsp;→&nbsp;AB</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
-<tr><td>BiB&nbsp;→&nbsp;FL</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BiB&nbsp;→&nbsp;GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>BiB&nbsp;→&nbsp;LzTr</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
-<tr><td>BiB&nbsp;→&nbsp;OPS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>BiB&nbsp;→&nbsp;RFX</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
-<tr><td>BiB&nbsp;→&nbsp;SceneHD</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
-<tr class="desc"><td colspan="3">Blutopia (BLU)<br>Invite forum unlocks with BluExtremist or BluSeeder<br>BluExtremist: 20TB upload, 3 months account age.<br>BluSeeder: 5TB seedsize, 30 days average seedtime, 1 month account age.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;Aither</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;ANT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;DT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;FL</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;MTV</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;NBL</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;OPS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>BLU&nbsp;→&nbsp;THD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr class="desc"><td colspan="3">Cinemageddon (CG)<br>Invite forum unlocks with Superfan user class: 200GB upload, 20GB download, 1.5 ratio.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;ANT</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;BdC</td><td>60&nbsp;days</td><td>2 months account age.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;GPW</td><td>30&nbsp;days</td><td>10 torrents uploaded.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;JPTV.club</td><td>30&nbsp;days</td><td>1.0 ratio.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;MAM</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;NBL</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;OPS</td><td>182&nbsp;days</td><td>1.5 ratio, 6 months account age.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;PTF</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;SpeedApp</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;SG</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;THD</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>CG&nbsp;→&nbsp;UHDB</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
-<tr class="desc"><td colspan="3">GazelleGames.net (GGn)<br>Invite forum unlocks with Pro Gamer user class. All user classes are gained with achievement points.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;AB</td><td>90&nbsp;days</td><td>Elite Gamer user class. 3 months account age.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;ANT</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;CGP</td><td>90&nbsp;days</td><td>1.0 real ratio. 3 months account age.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;CCS</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;DIC</td><td>30&nbsp;days</td><td>10 music uploads, or 15 other uploads.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;EB</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;FF</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;MAM</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;MTV</td><td>180&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;NBL</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;OpenCD</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;OPS</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;PB</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;PTer</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;PTN</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;PxC</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;PxHD</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;RED</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;SG</td><td>90&nbsp;days</td><td>90 days account age. Currently at user limit.</td></tr>
-<tr><td>GGn&nbsp;→&nbsp;UHDB</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">MyAnonaMouse (MAM)<br>Invite forum unlocks with Power User user class: 25GB upload, 2.0 ratio, 4 weeks account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;ABT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;Aither</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;ANT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;BdC</td><td>60&nbsp;days</td><td>2 months account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;BtW</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;BRKS</td><td>365&nbsp;days</td><td>1.51 ratio. 1 year account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;CGP</td><td>180&nbsp;days</td><td>1TB upload. 6 months account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;Milkie</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;MyXZ</td><td>365&nbsp;days</td><td>1 other tracker profile with 1 year account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;NBL</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;OBS</td><td>90&nbsp;days</td><td>100GB upload. 3 months account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;OPS</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;OTW</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;PxC</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;PxHD</td><td>180&nbsp;days</td><td>2 other tracker profiles. 6 months account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;SC</td><td>180&nbsp;days</td><td>50GB upload. 6 months account age.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;SM</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;TG</td><td>28&nbsp;days</td><td>2 or 3 other tracker profiles.</td></tr>
-<tr><td>MAM&nbsp;→&nbsp;TSP</td><td>60&nbsp;days</td><td>2.0 ratio. 2 months account age.</td></tr>
-<tr class="desc"><td colspan="3">MoreThanTV (MTV)<br>Invite forum unlocks with Camera Operator user class: 500GB upload, 8 weeks account age.<br><br>Boom Operator user class: 1000GB upload, 10 checked uploads, 5 forum posts.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;Aither</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;BHD</td><td>365&nbsp;days</td><td>Boom Operator user class. 1 year account age.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;BLU</td><td>90&nbsp;days</td><td>1.0 real ratio. 3 months account age.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;CGP</td><td>90&nbsp;days</td><td>1.0 real ratio. 3 months account age.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;CHD</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;OPS</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;PTN</td><td>56&nbsp;days</td><td>Other tracker profiles.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;PxC</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;PB</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;RED</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;THD</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>MTV&nbsp;→&nbsp;UHDB</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">Nebulance (NBL)<br>Invite forum unlocks with Ensign user class: 100GB upload, 100 snatches, 100000 Cubits, 4 weeks account age.<br><br>Flattop user class: 250GB upload, 250 snatches, 500000 Cubits, 8 weeks account age.</td></tr>
-<tr><td>NBL&nbsp;→&nbsp;Aither</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>NBL&nbsp;→&nbsp;ANT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>NBL&nbsp;→&nbsp;BLU</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>NBL&nbsp;→&nbsp;GPW</td><td>56&nbsp;days</td><td>Flattop user class.</td></tr>
-<tr><td>NBL&nbsp;→&nbsp;PxC</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>NBL&nbsp;→&nbsp;RFX</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>NBL&nbsp;→&nbsp;SM</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">Orpheus (OPS)<br>Invite forum unlocks with Elite user class: 100GB upload, 1.05 ratio, 50 torrents uploaded, 4 weeks accout age.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;ANT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;BRKS</td><td>365&nbsp;days</td><td>1.51 ratio. 1 year account age.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;CCS</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;LzTr</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;MTV</td><td>180&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;NBL</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;OpenCD</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;RED</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;SM</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>OPS&nbsp;→&nbsp;UHDB</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">PassThePopcorn (PTP)<br>No requirement data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;AB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;AR</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;BdC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;BHD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;BiB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;BLU</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;BRKS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;CCS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;CH</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;D3</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;DIC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;Emp</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;FF</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;GGn</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;GPW</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;HDT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;HDSky</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;LzTr</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;MAM</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;MTV</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;NBL</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;OPS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;PTN</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;PxC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;PxHD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;RED</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;SC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;SceneHD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;SM</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;TG</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;THC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;TLFB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;TT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr><td>PTP&nbsp;→&nbsp;UHDB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
-<tr class="desc"><td colspan="3">Redacted (RED)<br>Invite forum unlocks with Power User user class: 25GB upload, 0.65 ratio, 5 torrents uploaded, 2 weeks accout age.<br><br>Elite user class: 100GB upload, 0.65 ratio, 50 torrents uploaded, 4 weeks accout age.<br>Torrent Master user class: 500GB upload, 0.65 ratio, 500 torrents uploaded, 8 weeks accout age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;AB</td><td>365&nbsp;days</td><td>1 year account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;ANT</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;BHD</td><td>28&nbsp;days</td><td>Elite user class.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;BLU</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;BdC</td><td>120&nbsp;days</td><td>4 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;BRKS</td><td>365&nbsp;days</td><td>Elite user class. 1.51 ratio. 1 year account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;CGP</td><td>180&nbsp;days</td><td>1.0 ratio. 6 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;CCS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;D3</td><td>365&nbsp;days</td><td>Elite user class. 1.5 ratio. 100 Perfect FLAC torrent uploads. 1 year account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;DIC</td><td>14&nbsp;days</td><td>10 music torrent uploads.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;GPW</td><td>28&nbsp;days</td><td>4 weeks account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;HDB</td><td>365&nbsp;days</td><td>Torrent Master user class. 1 year account age.<br>Additional requirements for Chinese users: 2 years account age. Either 2 other tracker profiles, or register with the same username as RED.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;LB</td><td>14&nbsp;days</td><td>1 other tracker profile.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;MAM</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;MTV</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;NBL</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;OPS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;PTN</td><td>14&nbsp;days</td><td>Other tracker profiles.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;PTP</td><td>365&nbsp;days</td><td>Torrent Master user class. 1 year account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;PxHD</td><td>14&nbsp;days</td><td>Elite user class. 3 other tracker profile with 6 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;RTT</td><td>14&nbsp;days</td><td>3 other tracker profiles. 6 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;SC</td><td>14&nbsp;days</td><td>6 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;SM</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;SceneHD</td><td>14&nbsp;days</td><td>5 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;TLFB</td><td>14&nbsp;days</td><td>3 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;TG</td><td>14&nbsp;days</td><td>1.05 ratio. 6 months account age. 3 other tracker profile with 6 months account age.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;TSP</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>RED&nbsp;→&nbsp;UHDB</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">U2.dmhy.org (U2)<br>Invite forum unlocks with Power User user class: 50GB download, 1.05 ratio, 4 weeks accout age.<br><br>Elite User user class: 120GB download, 1.55 ratio, 8 weeks accout age.<br>Crazy User user class: 300GB download, 2.05 ratio, 15 weeks accout age.<br>Insane User user class: 500GB download, 2.55 ratio, 25 weeks accout age.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;Azusa</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;DIC</td><td>105&nbsp;days</td><td>Crazy User user class. 5 music torrent uploads, or 10 other uploads.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;GMgard</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;GPW</td><td>105&nbsp;days</td><td>Crazy User user class. 1 torrent uploaded.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;HDChina</td><td>175&nbsp;days</td><td>Insane User user class.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;HDCity</td><td>28&nbsp;days</td><td>500GB upload.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;HTPT</td><td>56&nbsp;days</td><td>Elite User user class.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;KamePT</td><td>56&nbsp;days</td><td>Elite User user class.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;MDU</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;OpenCD</td><td>182&nbsp;days</td><td>Insane User user class. 6 months account age.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;OTW</td><td>91&nbsp;days</td><td>500GB upload. 3 months account age.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;PTer</td><td>182&nbsp;days</td><td>Insane User user class. 6 months account age.</td></tr>
-<tr><td>U2&nbsp;→&nbsp;Xinglin</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">UHDBits (UHDB)<br>Invite forum unlocks with Extreme User user class: 300GB upload, 2.0 ratio, 6 snatches, 20 seed/leech ratio, 8 weeks accout age.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;ANT</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;BdC</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;Bit-HDTV</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;BLU</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;FL</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;HDSky</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;JPS</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;MTV</td><td>182&nbsp;days</td><td>1.5 ratio, 6 months account age.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;NBL</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;OBS</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;OPS</td><td>120&nbsp;days</td><td>4 months account age.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;SpeedApp</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr><td>UHDB&nbsp;→&nbsp;THD</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
-<tr class="desc"><td colspan="3">LzTr (LzTr)<br>Invite forum unlocks with Power User user class: 25GB upload, 1.05 ratio, 5 torrents uploaded, 2 weeks account age.</td></tr>
-<tr class="desc"><td colspan="3">BrokenStones (BRKS)<br>Invite forum unlocks with Power User user class: 50GB upload, 1.05 ratio, 1 torrent uploaded.<br><br>Elite User user class: 75GB upload, 1.05 ratio, 10 torrents uploaded.</td></tr>
-<tr class="desc"><td colspan="3">HD-Torrents (HDT)<br>No official recruitment.</td></tr></table>
+<tr style="padding:8px"><td colspan="3">
+	<a href="https://inviteroute.github.io/graph/">Interactive graph view</a><br>
+	See the <a href="https://github.com/inviteroute/graph">GitHub repository</a> for ways to contribute data.
+</td></tr>
+<tr class="spacer"></tr>
+<tr id="h">
+<th scope="col">Thread</th>
+<th scope="col">Required&nbsp;age</th>
+<th scope="col">Additional&nbsp;information</th>
+</tr>
+<tr><td colspan="3">AnimeBytes (AB)<br>Invite forum unlocks with Power User user class: 25GB upload, 0.7 ratio, 10 torrents uploaded, 2 weeks account age.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>ACM</td><td>14&nbsp;days</td><td>4TB upload. 6 months account age.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>ANT</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>CCS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>D3</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>DIC</td><td>14&nbsp;days</td><td>10 music uploads, or 15 other uploads.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>FF</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>LzTr</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>MTV</td><td>180&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>NBL</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>OPS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>PxC</td><td>30&nbsp;days</td><td>1 month account age.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>PxHD</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>RED</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>SM</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>TG</td><td>14&nbsp;days</td><td>2 or 3 other tracker profiles.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>THD</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>U2</td><td>14&nbsp;days</td><td>Content to contribute.</td></tr>
+<tr><th scope="row">AB<span class="arrow">-&gt;</span>UHDB</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">AlphaRatio (AR)<br>Invite forum unlocks with Sphinx user class: 3.2TB upload, 1.44 million seed bonus points, no Hit and Runs, 26 weeks account age.<br><br>Satyr user class: 12TB upload, 2.4 million seed bonus points, no Hit and Runs, 60 weeks account age.<br>Adonis user class: 12TB upload, 2.0 million seed bonus points, no Hit and Runs, 60 weeks account age, 50USD or greater donation.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>BHD</td><td>182&nbsp;days</td><td>Satyr or Adonis user class.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>GGn</td><td>182&nbsp;days</td><td>Satyr or Adonis user class.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>LzTr</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>MTV</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>OBS</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>OPS</td><td>182&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>SceneHD</td><td>365&nbsp;days</td><td>1 torrent upload tagged scene, 12 months account age.</td></tr>
+<tr><th scope="row">AR<span class="arrow">-&gt;</span>UHDB</td><td>182&nbsp;days</td><td>Satyr or Adonis user class.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">BeyondHD (BHD)<br>Invite forum unlocks with Pro user class: 1.25TB upload, 0.70 ratio, 30 days seed time, 4 years 11 months total seed time, 60 completed seeds, 500GB special seed size, 6 months account age.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>Aither</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>ANT</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>CGP</td><td>90&nbsp;days</td><td>1.0 ratio. 3 months account age.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>Hone</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>MTV</td><td>182&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>NBL</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>PxC</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>PxHD</td><td>180&nbsp;days</td><td>2 other tracker profiles.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>RED</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BHD<span class="arrow">-&gt;</span>SM</td><td>180&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">Bibliotik (BiB)<br>Invite forum unlocks with Power User user class: either 1GB upload and 100 torrents uploaded, or 10GB upload and 10 torrents uploaded, 1.05 ratio, 2 weeks account age.</td></tr>
+<tr><th scope="row">BiB<span class="arrow">-&gt;</span>AB</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
+<tr><th scope="row">BiB<span class="arrow">-&gt;</span>FL</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BiB<span class="arrow">-&gt;</span>GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">BiB<span class="arrow">-&gt;</span>LzTr</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
+<tr><th scope="row">BiB<span class="arrow">-&gt;</span>OPS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">BiB<span class="arrow">-&gt;</span>RFX</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
+<tr><th scope="row">BiB<span class="arrow">-&gt;</span>SceneHD</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">Blutopia (BLU)<br>Invite forum unlocks with BluExtremist or BluSeeder<br>BluExtremist: 20TB upload, 3 months account age.<br>BluSeeder: 5TB seedsize, 30 days average seedtime, 1 month account age.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>Aither</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>ANT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>DT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>FL</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>MTV</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>NBL</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>OPS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">BLU<span class="arrow">-&gt;</span>THD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">Cinemageddon (CG)<br>Invite forum unlocks with Superfan user class: 200GB upload, 20GB download, 1.5 ratio.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>ANT</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>BdC</td><td>60&nbsp;days</td><td>2 months account age.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>GPW</td><td>30&nbsp;days</td><td>10 torrents uploaded.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>JPTV.club</td><td>30&nbsp;days</td><td>1.0 ratio.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>MAM</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>NBL</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>OPS</td><td>182&nbsp;days</td><td>1.5 ratio, 6 months account age.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>PTF</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>SpeedApp</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>SG</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>THD</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">CG<span class="arrow">-&gt;</span>UHDB</td><td>365&nbsp;days</td><td>12 months account age.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">GazelleGames.net (GGn)<br>Invite forum unlocks with Pro Gamer user class. All user classes are gained with achievement points.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>AB</td><td>90&nbsp;days</td><td>Elite Gamer user class. 3 months account age.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>ANT</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>CGP</td><td>90&nbsp;days</td><td>1.0 real ratio. 3 months account age.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>CCS</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>DIC</td><td>30&nbsp;days</td><td>10 music uploads, or 15 other uploads.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>EB</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>FF</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>MAM</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>MTV</td><td>180&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>NBL</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>OpenCD</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>OPS</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>PB</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>PTer</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>PTN</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>PxC</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>PxHD</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>RED</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>SG</td><td>90&nbsp;days</td><td>90 days account age. Currently at user limit.</td></tr>
+<tr><th scope="row">GGn<span class="arrow">-&gt;</span>UHDB</td><td>30&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">MyAnonaMouse (MAM)<br>Invite forum unlocks with Power User user class: 25GB upload, 2.0 ratio, 4 weeks account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>ABT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>Aither</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>ANT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>BdC</td><td>60&nbsp;days</td><td>2 months account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>BtW</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>BRKS</td><td>365&nbsp;days</td><td>1.51 ratio. 1 year account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>CGP</td><td>180&nbsp;days</td><td>1TB upload. 6 months account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>Milkie</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>MyXZ</td><td>365&nbsp;days</td><td>1 other tracker profile with 1 year account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>NBL</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>OBS</td><td>90&nbsp;days</td><td>100GB upload. 3 months account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>OPS</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>OTW</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>PxC</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>PxHD</td><td>180&nbsp;days</td><td>2 other tracker profiles. 6 months account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>SC</td><td>180&nbsp;days</td><td>50GB upload. 6 months account age.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>SM</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>TG</td><td>28&nbsp;days</td><td>2 or 3 other tracker profiles.</td></tr>
+<tr><th scope="row">MAM<span class="arrow">-&gt;</span>TSP</td><td>60&nbsp;days</td><td>2.0 ratio. 2 months account age.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">MoreThanTV (MTV)<br>Invite forum unlocks with Camera Operator user class: 500GB upload, 8 weeks account age.<br><br>Boom Operator user class: 1000GB upload, 10 checked uploads, 5 forum posts.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>Aither</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>BHD</td><td>365&nbsp;days</td><td>Boom Operator user class. 1 year account age.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>BLU</td><td>90&nbsp;days</td><td>1.0 real ratio. 3 months account age.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>CGP</td><td>90&nbsp;days</td><td>1.0 real ratio. 3 months account age.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>CHD</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>OPS</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>PTN</td><td>56&nbsp;days</td><td>Other tracker profiles.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>PxC</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>PB</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>RED</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>THD</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">MTV<span class="arrow">-&gt;</span>UHDB</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">Nebulance (NBL)<br>Invite forum unlocks with Ensign user class: 100GB upload, 100 snatches, 100000 Cubits, 4 weeks account age.<br><br>Flattop user class: 250GB upload, 250 snatches, 500000 Cubits, 8 weeks account age.</td></tr>
+<tr><th scope="row">NBL<span class="arrow">-&gt;</span>Aither</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">NBL<span class="arrow">-&gt;</span>ANT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">NBL<span class="arrow">-&gt;</span>BLU</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">NBL<span class="arrow">-&gt;</span>GPW</td><td>56&nbsp;days</td><td>Flattop user class.</td></tr>
+<tr><th scope="row">NBL<span class="arrow">-&gt;</span>PxC</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">NBL<span class="arrow">-&gt;</span>RFX</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">NBL<span class="arrow">-&gt;</span>SM</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">Orpheus (OPS)<br>Invite forum unlocks with Elite user class: 100GB upload, 1.05 ratio, 50 torrents uploaded, 4 weeks accout age.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>ANT</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>BRKS</td><td>365&nbsp;days</td><td>1.51 ratio. 1 year account age.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>CCS</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>LzTr</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>MTV</td><td>180&nbsp;days</td><td>1.5 ratio. 6 months account age.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>NBL</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>OpenCD</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>RED</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>SM</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">OPS<span class="arrow">-&gt;</span>UHDB</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">PassThePopcorn (PTP)<br>No requirement data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>AB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>AR</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>BdC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>BHD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>BiB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>BLU</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>BRKS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>CCS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>CH</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>D3</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>DIC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>Emp</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>FF</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>GGn</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>GPW</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>HDT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>HDSky</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>LzTr</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>MAM</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>MTV</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>NBL</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>OPS</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>PTN</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>PxC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>PxHD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>RED</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>SC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>SceneHD</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>SM</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>TG</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>THC</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>TLFB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>TT</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr><th scope="row">PTP<span class="arrow">-&gt;</span>UHDB</td><td>30&nbsp;days</td><td>No data yet.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">Redacted (RED)<br>Invite forum unlocks with Power User user class: 25GB upload, 0.65 ratio, 5 torrents uploaded, 2 weeks accout age.<br><br>Elite user class: 100GB upload, 0.65 ratio, 50 torrents uploaded, 4 weeks accout age.<br>Torrent Master user class: 500GB upload, 0.65 ratio, 500 torrents uploaded, 8 weeks accout age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>AB</td><td>365&nbsp;days</td><td>1 year account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>ANT</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>BHD</td><td>28&nbsp;days</td><td>Elite user class.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>BLU</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>BdC</td><td>120&nbsp;days</td><td>4 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>BRKS</td><td>365&nbsp;days</td><td>Elite user class. 1.51 ratio. 1 year account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>CGP</td><td>180&nbsp;days</td><td>1.0 ratio. 6 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>CCS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>D3</td><td>365&nbsp;days</td><td>Elite user class. 1.5 ratio. 100 Perfect FLAC torrent uploads. 1 year account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>DIC</td><td>14&nbsp;days</td><td>10 music torrent uploads.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>Emp</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>GGn</td><td>90&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>GPW</td><td>28&nbsp;days</td><td>4 weeks account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>HDB</td><td>365&nbsp;days</td><td>Torrent Master user class. 1 year account age.<br>Additional requirements for Chinese users: 2 years account age. Either 2 other tracker profiles, or register with the same username as RED.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>LB</td><td>14&nbsp;days</td><td>1 other tracker profile.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>MAM</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>MTV</td><td>180&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>NBL</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>OPS</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>PTN</td><td>14&nbsp;days</td><td>Other tracker profiles.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>PTP</td><td>365&nbsp;days</td><td>Torrent Master user class. 1 year account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>PxHD</td><td>14&nbsp;days</td><td>Elite user class. 3 other tracker profile with 6 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>RTT</td><td>14&nbsp;days</td><td>3 other tracker profiles. 6 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>SC</td><td>14&nbsp;days</td><td>6 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>SM</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>SceneHD</td><td>14&nbsp;days</td><td>5 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>TLFB</td><td>14&nbsp;days</td><td>3 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>TG</td><td>14&nbsp;days</td><td>1.05 ratio. 6 months account age. 3 other tracker profile with 6 months account age.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>TSP</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">RED<span class="arrow">-&gt;</span>UHDB</td><td>14&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">U2.dmhy.org (U2)<br>Invite forum unlocks with Power User user class: 50GB download, 1.05 ratio, 4 weeks accout age.<br><br>Elite User user class: 120GB download, 1.55 ratio, 8 weeks accout age.<br>Crazy User user class: 300GB download, 2.05 ratio, 15 weeks accout age.<br>Insane User user class: 500GB download, 2.55 ratio, 25 weeks accout age.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>Azusa</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>DIC</td><td>105&nbsp;days</td><td>Crazy User user class. 5 music torrent uploads, or 10 other uploads.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>GMgard</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>GPW</td><td>105&nbsp;days</td><td>Crazy User user class. 1 torrent uploaded.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>HDChina</td><td>175&nbsp;days</td><td>Insane User user class.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>HDCity</td><td>28&nbsp;days</td><td>500GB upload.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>HTPT</td><td>56&nbsp;days</td><td>Elite User user class.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>KamePT</td><td>56&nbsp;days</td><td>Elite User user class.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>MDU</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>OpenCD</td><td>182&nbsp;days</td><td>Insane User user class. 6 months account age.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>OTW</td><td>91&nbsp;days</td><td>500GB upload. 3 months account age.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>PTer</td><td>182&nbsp;days</td><td>Insane User user class. 6 months account age.</td></tr>
+<tr><th scope="row">U2<span class="arrow">-&gt;</span>Xinglin</td><td>28&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">UHDBits (UHDB)<br>Invite forum unlocks with Extreme User user class: 300GB upload, 2.0 ratio, 6 snatches, 20 seed/leech ratio, 8 weeks accout age.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>ANT</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>BdC</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>Bit-HDTV</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>BLU</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>FL</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>HDSky</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>JPS</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>MTV</td><td>182&nbsp;days</td><td>1.5 ratio, 6 months account age.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>NBL</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>OBS</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>OPS</td><td>120&nbsp;days</td><td>4 months account age.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>SpeedApp</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr><th scope="row">UHDB<span class="arrow">-&gt;</span>THD</td><td>56&nbsp;days</td><td>No additional requirements.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">LzTr (LzTr)<br>Invite forum unlocks with Power User user class: 25GB upload, 1.05 ratio, 5 torrents uploaded, 2 weeks account age.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">BrokenStones (BRKS)<br>Invite forum unlocks with Power User user class: 50GB upload, 1.05 ratio, 1 torrent uploaded.<br><br>Elite User user class: 75GB upload, 1.05 ratio, 10 torrents uploaded.</td></tr>
+<tr class="spacer"></tr>
+<tr><td colspan="3">HD-Torrents (HDT)<br>No official recruitment.</td></tr></table>
 </body>
 </html>
